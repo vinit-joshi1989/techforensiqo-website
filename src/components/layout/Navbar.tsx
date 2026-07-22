@@ -1,11 +1,4 @@
-import {
-  AppBar,
-  Box,
-  Button,
-  Container,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, Box, Button, Container, Toolbar } from "@mui/material";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -28,19 +21,28 @@ function Navbar() {
     >
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={{ minHeight: 72 }}>
-          <Typography
+          <Box
             component="a"
             href="#home"
-            variant="h6"
             sx={{
-              fontWeight: 800,
+              display: "flex",
+              alignItems: "center",
               flexGrow: 1,
-              color: "inherit",
               textDecoration: "none",
-              letterSpacing: "-0.5px"
-            }}>
-            TechForensiqo
-          </Typography>
+              mr: 3,
+            }}
+          >
+            <Box
+              component="img"
+              src="/images/branding/logo.svg"
+              alt="TechForensiqo"
+              sx={{
+                height: 50,
+                width: "auto",
+                display: "block",
+              }}
+            />
+          </Box>
 
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 1 }}>
             {navItems.map((item) => (
