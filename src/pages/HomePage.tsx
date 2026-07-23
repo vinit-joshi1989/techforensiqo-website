@@ -13,6 +13,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import CodeIcon from "@mui/icons-material/Code";
 import CloudIcon from "@mui/icons-material/Cloud";
 import PsychologyIcon from "@mui/icons-material/Psychology";
+import ProjectsSection from "../components/sections/ProjectsSection";
 
 const services = [
   {
@@ -65,9 +66,13 @@ function HomePage() {
         />
 
         <Container maxWidth="lg">
-          <Grid container spacing={6} sx={{
-            alignItems: "center"
-          }}>
+          <Grid
+            container
+            spacing={6}
+            sx={{
+              alignItems: "center",
+            }}
+          >
             <Grid size={{ xs: 12, md: 7 }}>
               <Chip
                 label="Enterprise engineering • Cloud • AI"
@@ -94,8 +99,9 @@ function HomePage() {
                   mt: 3,
                   maxWidth: 700,
                   fontSize: { xs: "1.1rem", md: "1.3rem" },
-                  lineHeight: 1.7
-                }}>
+                  lineHeight: 1.7,
+                }}
+              >
                 TechForensiqo creates scalable enterprise applications, modern
                 APIs, cloud-ready platforms, and intelligent digital solutions.
               </Typography>
@@ -149,8 +155,9 @@ function HomePage() {
                       variant="h5"
                       sx={{
                         fontWeight: 800,
-                        mt: 1
-                      }}>
+                        mt: 1,
+                      }}
+                    >
                       Enterprise Payment Platform
                     </Typography>
 
@@ -170,9 +177,13 @@ function HomePage() {
                             backgroundColor: "rgba(255,255,255,0.03)",
                           }}
                         >
-                          <Typography sx={{
-                            fontWeight: 600
-                          }}>{item}</Typography>
+                          <Typography
+                            sx={{
+                              fontWeight: 600,
+                            }}
+                          >
+                            {item}
+                          </Typography>
                         </Box>
                       ))}
                     </Stack>
@@ -201,8 +212,9 @@ function HomePage() {
                     sx={{
                       flexWrap: "wrap",
                       gap: 1,
-                      mt: 2
-                    }}>
+                      mt: 2,
+                    }}
+                  >
                     {["React", "Java", "Docker", "Cloud"].map((item) => (
                       <Chip key={item} label={item} size="small" />
                     ))}
@@ -224,8 +236,9 @@ function HomePage() {
             sx={{
               fontWeight: 800,
               mt: 1,
-              maxWidth: 800
-            }}>
+              maxWidth: 800,
+            }}
+          >
             Engineering reliable digital products with a long-term mindset.
           </Typography>
 
@@ -235,8 +248,9 @@ function HomePage() {
               mt: 3,
               maxWidth: 800,
               fontSize: "1.1rem",
-              lineHeight: 1.8
-            }}>
+              lineHeight: 1.8,
+            }}
+          >
             TechForensiqo is a software engineering initiative focused on
             designing and building enterprise-grade applications. Combining
             modern backend technologies, intuitive user experiences,
@@ -250,8 +264,9 @@ function HomePage() {
             sx={{
               color: "text.secondary",
               mb: 4,
-              fontWeight: 600
-            }}>
+              fontWeight: 600,
+            }}
+          >
             Technologies We Use
           </Typography>
 
@@ -261,8 +276,9 @@ function HomePage() {
             useFlexGap
             sx={{
               justifyContent: "center",
-              flexWrap: "wrap"
-            }}>
+              flexWrap: "wrap",
+            }}
+          >
             {[
               "React",
               "TypeScript",
@@ -294,8 +310,9 @@ function HomePage() {
             sx={{
               fontWeight: 800,
               mt: 1,
-              mb: 5
-            }}>
+              mb: 5,
+            }}
+          >
             What we build
           </Typography>
 
@@ -310,16 +327,21 @@ function HomePage() {
                   }}
                 >
                   <CardContent sx={{ p: 4 }}>
-                    <Box sx={{
-                      color: "primary.main"
-                    }}>{service.icon}</Box>
+                    <Box
+                      sx={{
+                        color: "primary.main",
+                      }}
+                    >
+                      {service.icon}
+                    </Box>
 
                     <Typography
                       variant="h5"
                       sx={{
                         fontWeight: 700,
-                        mt: 3
-                      }}>
+                        mt: 3,
+                      }}
+                    >
                       {service.title}
                     </Typography>
 
@@ -327,8 +349,9 @@ function HomePage() {
                       sx={{
                         color: "text.secondary",
                         mt: 2,
-                        lineHeight: 1.7
-                      }}>
+                        lineHeight: 1.7,
+                      }}
+                    >
                       {service.description}
                     </Typography>
                   </CardContent>
@@ -338,93 +361,7 @@ function HomePage() {
           </Grid>
         </Box>
 
-        <Box id="portfolio" component="section" sx={{ py: { xs: 8, md: 12 } }}>
-          <Typography variant="overline" color="primary">
-            Portfolio
-          </Typography>
-
-          <Typography
-            variant="h3"
-            sx={{
-              fontWeight: 800,
-              mt: 1,
-              mb: 5
-            }}>
-            Featured project
-          </Typography>
-
-          <Card
-            sx={{
-              border: "1px solid rgba(124,58,237,0.35)",
-              background:
-                "linear-gradient(135deg, rgba(124,58,237,0.16), rgba(17,24,39,0.9))",
-            }}
-          >
-            <CardContent sx={{ p: { xs: 4, md: 6 } }}>
-              <Typography variant="h4" sx={{
-                fontWeight: 800
-              }}>
-                Enterprise Payment Platform
-              </Typography>
-
-              <Typography
-                sx={{
-                  color: "text.secondary",
-                  mt: 2,
-                  maxWidth: 750,
-                  lineHeight: 1.8
-                }}>
-                A full-stack payment management platform built with React,
-                TypeScript, Spring Boot, PostgreSQL, Docker, Swagger, and
-                automated GitHub Actions workflows.
-              </Typography>
-
-              <Stack
-                direction="row"
-                sx={{
-                  flexWrap: "wrap",
-                  gap: 1,
-                  mt: 3
-                }}>
-                {[
-                  "React",
-                  "TypeScript",
-                  "Spring Boot",
-                  "PostgreSQL",
-                  "Docker",
-                ].map((technology) => (
-                  <Chip key={technology} label={technology} />
-                ))}
-              </Stack>
-
-              <Stack
-                direction={{ xs: "column", sm: "row" }}
-                spacing={2}
-                sx={{ mt: 4 }}
-              >
-                <Button variant="contained" disabled>
-                  Live Demo
-                </Button>
-
-                <Button
-                  variant="outlined"
-                  href="https://github.com/vinit-joshi1989/enterprise-payment-dashboard"
-                  target="_blank"
-                >
-                  Frontend
-                </Button>
-
-                <Button
-                  variant="outlined"
-                  href="https://github.com/vinit-joshi1989/enterprise-payment-api"
-                  target="_blank"
-                >
-                  Backend
-                </Button>
-              </Stack>
-            </CardContent>
-          </Card>
-        </Box>
+        <ProjectsSection />
 
         <Box
           id="contact"
@@ -438,9 +375,12 @@ function HomePage() {
               "linear-gradient(135deg, rgba(124,58,237,0.22), rgba(6,182,212,0.12))",
           }}
         >
-          <Typography variant="h3" sx={{
-            fontWeight: 800
-          }}>
+          <Typography
+            variant="h3"
+            sx={{
+              fontWeight: 800,
+            }}
+          >
             Let&apos;s build something meaningful.
           </Typography>
 
@@ -448,8 +388,9 @@ function HomePage() {
             sx={{
               color: "text.secondary",
               mt: 2,
-              fontSize: "1.1rem"
-            }}>
+              fontSize: "1.1rem",
+            }}
+          >
             Explore our engineering work or get in touch to discuss an idea.
           </Typography>
 
